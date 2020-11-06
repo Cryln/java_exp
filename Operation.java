@@ -42,12 +42,13 @@ class Operation {
         else return null;
     }
     public void printCources(Vector<Cource> cources){
+        int max = 0;
         for(Cource c:cources){
+            
             System.out.println(c.getCourceId()+' '+c.getCourceName()+' '+
             c.getCourceType()+' '+c.getCapacity());
         }
     }
-    
     public Vector<Student> getStuByCource(){
         String courceId;
         System.out.println("输入课程id：");
@@ -73,7 +74,6 @@ class Operation {
             return false;
         }
     }
-
     public void stuListOp(String operation){
         if(this.currentUser.getPermission().ordinal()==Run.permission.ADMIN.ordinal()){
             if(operation.equals(ins)){
@@ -157,6 +157,10 @@ class Operation {
                 courceId = sc.next();
                 Student student = Database.studentList.findById(studentId);
                 Cource cource = Database.courceList.findById(courceId);
+                if(cource.getCapacity()<=Database.selectionList.findStudents(cource).size()){
+                    System.out.println("课满！");
+                    return false;
+                }
                 if(student!=null&&cource!=null){
                     Database.selectionList.addInList(student, cource);
                 }
@@ -232,5 +236,4 @@ class Operation {
             return false;
         }
     }
-   
 }

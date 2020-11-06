@@ -10,7 +10,6 @@ public class CourceList {
     public void addInList(Cource cource){
         this.cources.add(cource);
     }
-
     public boolean addManually(){
         Scanner sc = new Scanner(System.in);
         String courceId=null;
@@ -65,7 +64,6 @@ public class CourceList {
         }
         return null;
     }
-
     public Vector<Cource> getCources() {
         return cources;
     }

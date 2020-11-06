@@ -22,12 +22,10 @@ public class Run {
         while(currentUser.getPermission()==permission.NONE)
             currentUser = login.tologin();
         runtime = currentUser.getPermission();
-        System.out.println(runtime);
         int statu =1;
         do{
             statu = menu.funSelect(currentUser);
-        }while(statu ==1);
-        
+        }while(statu ==1);   
         endSaving();
     }
 }

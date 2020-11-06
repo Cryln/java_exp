@@ -2,11 +2,9 @@ import java.util.Vector;
 
 public class SelectionList {
     Vector<Selection> selections = new Vector<>();
-    
     public void addInList(Student stu,Cource cource){
         this.selections.add(new Selection(stu, cource));
     }
-    
     public Vector<Selection> getSelections(){
         return this.selections;
     }

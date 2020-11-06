@@ -3,21 +3,18 @@
 public class Teacher extends User{
     private String name;
     private String level;
-
     public Teacher(String id, String passwd, String name, String level){
         super(id,passwd);
         this.setName(name);
         this.setLecel(level);
         super.setPermission(Run.permission.TEACHER);
     }
-
     public String getName(){
         return this.name;
     }
     public void setName(String name){
         this.name = name;
     }
-
     public String getId(){
         return super.getId();
     }

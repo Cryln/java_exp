@@ -3,7 +3,6 @@
 public class Student extends User {
     private String name;
     private String myClass;
-
     public Student(String id,String passwd,String name,String myClass){
         super(id,passwd);
         this.setName(name);
@@ -16,14 +15,12 @@ public class Student extends User {
     public void setName(String name){
         this.name = name;
     }
-
     public String getId(){
         return super.getId();
     }
     public void setId(String id){
         super.setId(id);
     }
-
     public String getMyClass(){
         return this.myClass;
     }

@@ -3,15 +3,12 @@ import java.util.Vector;
 
 public class StudentList {
     private Vector<Student> students = new Vector<>();
-
-
     public void addInList(String id,String passwd,String name,String myClass){
         this.students.add(new Student(id, passwd, name, myClass));
     }
     public void addInList(Student student){
         this.students.add(student);
     }
-
     public void addManually(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Student's name:");
@@ -30,15 +27,12 @@ public class StudentList {
             }
         }
     }
-
-
     public Student findById(String id){
         for(Student s:this.students){
             if(s.getId().equals(id)) return s;
         }
         return null;
     }
-
     public Vector<Student> getStudents() {
         return students;
     }

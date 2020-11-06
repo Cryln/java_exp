@@ -5,7 +5,6 @@ class Login {
     Login(User user){
         currentUser = user;
     }
-    
     public User tologin(){
         Run.permission runtime = currentUser.getPermission();
         User user = null;

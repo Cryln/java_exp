@@ -3,7 +3,6 @@ import java.util.Vector;
 
 public class TeacherList {
     private Vector<Teacher> teachers = new Vector<>();
-
     public void addInList(String id, String passwd, String name, String level){
         this.teachers.add(new Teacher(id, passwd, name, level));
     }
@@ -22,7 +21,6 @@ public class TeacherList {
         String level = sc.next();
         addInList(id, passwd, name, level);
     }
-
     public Teacher findById(String id){
         for(Teacher t:this.teachers){
             if(t.getId().equals(id)){
@@ -31,7 +29,6 @@ public class TeacherList {
         }
         return null;
     }
-
     public Vector<Teacher> getTeachers() {
         return teachers;
     }
