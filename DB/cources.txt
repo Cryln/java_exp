@@ -1,0 +1,7 @@
+0 高数 必修 Infinity
+1 离散 必修 Infinity
+2 政治 必修 Infinity
+3 C语言 必修 Infinity
+4 音乐鉴赏 选修 33.0
+5 历史品读 选修 33.0
+6 宋代诗词 选修 33.0
